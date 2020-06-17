@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    h1 {
+        text-align: center;
+        text-transform: uppercase;
+        color: #4CAF50;
+      }
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  width: 250px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+</head>
+<body>
+
+<h1>Talk with Bots!!!</h1>
+<div align="center">
+<a href='bot11'><button class="button" style="vertical-align:middle"><span>Bot1 </span></button></a>
+<a href='bot22'><button class="button" style="vertical-align:middle"><span>Bot2 </span></button></a>
+<a href='bot33'><button class="button" style="vertical-align:middle"><span>Let the Bots Talk with each other </span></button></a>
+</div>
+</body>
+</html>

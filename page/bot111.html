@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="bot11"  method="POST">
+        {%csrf_token%}
+        {%if a is 10%}
+            {%for i in bot%}
+            <pre>You : {{i.req1}}   Bot1 : {{i.res1}}</pre>
+            {%endfor%}
+        {%endif%}
+
+        <input type="text"  name="question"  placeholder="You:" >
+        <input type="submit" value="Send">
+    </form>
+</body>
+</html>

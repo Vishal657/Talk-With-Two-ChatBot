@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        setTimeout("CallButton()",3000)
+        function CallButton()
+        {
+           document.getElementById("button1").click();   
+        }
+        </script>
+</head>
+<body>
+    <form action="bot33"  method="POST">
+        {%csrf_token%}
+        {%if x is 10%}
+        {%for i in bot%}
+        {%if i.Ousestion == 'Bot1'%}
+        <pre>Bot1 : {{i.req3}}   Bot2 : {{i.res3}}</pre>
+        {%else%}
+        <pre>Bot2 : {{i.req3}}   Bot1 : {{i.res3}}</pre>
+        {%endif%}
+        {%endfor%}
+        {%endif%}
+        <input type='hidden' value={{max}} name="max">
+        <input type="hidden" name="reply"  value='{{reply}}' id="Button1">
+        <input type='submit' value="see more">
+    </form>
+    <button>Stop</button>
+</body>
+</html>
